@@ -1,0 +1,70 @@
+{
+    "layer": "top",
+    "position": "top",
+    "spacing": "4",
+
+    "modules-left": [
+        "clock",
+    ],
+
+    "modules-center": [
+        "hyprland/workspaces",
+    ],
+
+    "modules-right": [
+        "network",
+        "battery",
+        "pulseaudio",
+        "pulseaudio/slider",
+    ],
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "active": "",
+            "default": ""
+        },
+    },
+
+    "clock": {
+        "format": "{:%a %d, %H:%M %p}"
+    },
+
+    "battery": {
+        "states": {
+        "warning": 30,
+        "critical": 15
+        },
+        "format": "{capacity}% <span font='12'>{icon}</span>", 
+        "format-charging": " {capacity}% <span font='12'>󱐋</span>",
+        "interval": 1,
+        "format-icons": ["󰂎", "󰁼", "󰁿", "󰂁", "󰁹"],
+        "tooltip": true,
+    },
+
+    "network": {
+        "format-wifi": "<span font='16'></span>",
+        "format-ethernet":"",
+        "format-disconnected": "",
+        "tooltip-format-disconnected": "Error",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+        "tooltip-format-ethernet": "{ifname} 🖧 ",
+        },
+
+    "pulseaudio/slider": {
+        "format": "{volume}%",
+        "tooltip": false,
+        "on-click": "pavucontrol"
+    },
+
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-muted": " {format_source}",
+        "format-icons": {
+            "default": [
+                "",
+                ""
+            ]
+        }
+    },
+}
