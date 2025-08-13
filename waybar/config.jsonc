@@ -1,33 +1,49 @@
 {
+    "reload_style_on_change": true,
     "layer": "top",
     "position": "top",
-    "spacing": "4",
+    "spacing": "0",
+    "margin": "8px 8px 0 8px",
 
     "modules-left": [
-        "clock",
-    ],
-
-    "modules-center": [
         "hyprland/workspaces",
     ],
 
+    "modules-center": [
+        "clock",
+    ],
+
     "modules-right": [
-        "network",
         "battery",
-        "pulseaudio",
-        "pulseaudio/slider",
     ],
 
     "hyprland/workspaces": {
         "format": "{icon}",
         "format-icons": {
-            "active": "",
-            "default": ""
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "10": "10",
+            "default": "◯",
+            "empty": "◯",
         },
+
+        "sort-by-number": true,
+        "all-outputs": false,
+        "on-click": "activate",
     },
 
     "clock": {
-        "format": "{:%a %d, %H:%M %p}"
+        "interval": 60,
+        "format": "{:%I:%M %p}",
+        "format-alt": "{:%a %d, %b}",
+        "tooltip": false,
     },
 
     "battery": {
@@ -40,31 +56,5 @@
         "interval": 1,
         "format-icons": ["󰂎", "󰁼", "󰁿", "󰂁", "󰁹"],
         "tooltip": true,
-    },
-
-    "network": {
-        "format-wifi": "<span font='16'></span>",
-        "format-ethernet":"",
-        "format-disconnected": "",
-        "tooltip-format-disconnected": "Error",
-        "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
-        "tooltip-format-ethernet": "{ifname} 🖧 ",
-        },
-
-    "pulseaudio/slider": {
-        "format": "{volume}%",
-        "tooltip": false,
-        "on-click": "pavucontrol"
-    },
-
-    "pulseaudio": {
-        "format": "{volume}% {icon}",
-        "format-muted": " {format_source}",
-        "format-icons": {
-            "default": [
-                "",
-                ""
-            ]
-        }
     },
 }
