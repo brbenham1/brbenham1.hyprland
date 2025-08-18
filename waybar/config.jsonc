@@ -46,15 +46,18 @@
         "tooltip": false,
     },
 
-    "battery": {
-        "states": {
-        "warning": 30,
-        "critical": 15
-        },
-        "format": "{capacity}% <span font='12'>{icon}</span>", 
-        "format-charging": " {capacity}% <span font='12'>󱐋</span>",
-        "interval": 1,
-        "format-icons": ["󰂎", "󰁼", "󰁿", "󰂁", "󰁹"],
-        "tooltip": true,
+  "battery": {
+    "interval": 5,
+    "states": {
+      "warning": 20,
+      "critical": 10,
+      "plugordie": 5
     },
+    "format": "{icon} {capacity}%",
+    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    "format-charging": " {capacity}%",
+    "format-plugged": "󰚥 {capacity}%",
+    "format-plugordie": "󰂃 {capacity}%",
+    "tooltip": false
+  },
 }

@@ -1,0 +1,86 @@
+@import url("colors.css");
+
+/* ======================= */
+/* Global Styles           */
+/* ======================= */
+* {
+  border: none;
+  font-family: "roboto";
+  font-size: 16px;
+  box-shadow: none;
+  min-width: 28px;
+  min-height: 28px;
+}
+
+window#waybar {
+  background: transparent;
+}
+
+/* ======================= */
+/* Workspace Management    */
+/* ======================= */
+#workspaces {
+  margin: 0;
+  padding: 0;
+}
+
+#workspaces button {
+  color: @sumiInk4;
+  padding: 0 8px;
+  margin: 0 4px;
+  /* border: solid 2px transparent; */
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+#workspaces button.active {
+  color: @lotusGray;
+  /* border: solid 2px @foreground; */
+  background: rgba(175, 175, 175, 0.1);
+}
+
+#workspaces button:hover {
+  background: rgba(175, 175, 175, 0.1);
+  color: @lotusGray;
+}
+
+/* ======================= */
+/* System Components       */
+/* ======================= */
+#clock {
+  padding: 0 12px;
+  margin: 0 4px;
+  border-radius: 8px;
+  color: @lotusGray;
+  background: rgba(175, 175, 175, 0.1);
+  font-weight: 600;
+}
+
+/* ======================= */
+/* Battery                 */
+/* ======================= */
+#battery {
+  color: @foreground;
+  background: rgba(175, 175, 175, 0.1);
+  padding: 0 12px;
+  margin: 0 4px;
+  /* border: solid 2px @foreground; */
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+#battery.charging {
+  color: @springGreen;
+  /* border: solid 2px #8ec07c; */
+}
+
+#battery.warning {
+  color: @carpYellow;
+  /* border: solid 2px #d79921; */
+}
+
+#battery.critical,
+#battery.plugordie {
+  color: @waveRed;
+  /* border: solid 2px #cc241d; */
+}
