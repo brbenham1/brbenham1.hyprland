@@ -15,6 +15,7 @@
 
     "modules-right": [
         "battery",
+        "custom/power",
     ],
 
     "hyprland/workspaces": {
@@ -60,4 +61,10 @@
     "format-plugordie": "󰂃 {capacity}%",
     "tooltip": false
   },
+
+    "custom/power": {
+    "format": "'",
+    "on-click": "wlogout --protocol layer-shell -b 2",
+    "tooltip": false
+  }
 }

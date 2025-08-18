@@ -84,3 +84,16 @@ window#waybar {
   color: @waveRed;
   /* border: solid 2px #cc241d; */
 }
+
+/* ======================= */
+/* Power Menu              */
+/* ======================= */
+#custom-power {
+  color: @foreground;
+  background: rgba(175, 175, 175, 0.1);
+  padding: 0 0;
+  margin: 0 4px;
+  /* border: solid 2px @foreground; */
+  border-radius: 8px;
+  font-weight: 600;
+}
